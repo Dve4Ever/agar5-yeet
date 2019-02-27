@@ -50,7 +50,7 @@ FFA.prototype.updateLB = function(gameServer) {
             // Initial player
             lb.push(player);
             continue;
-        } else if (lb.length < 10) {
+        } else if (lb.length < 20) {
             this.leaderboardAddSort(player,lb);
         } else {
             // 10 in leaderboard already
