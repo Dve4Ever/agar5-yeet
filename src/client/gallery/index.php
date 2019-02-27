@@ -63,7 +63,7 @@ li{
 			if(!in_array($curimg, $ignore)) {
 				$name = pathinfo($curimg)['filename'];
 				$curimg = str_replace(' ', '%20', $curimg);
-				echo "<li><div class=\"circular\" style=' background-image: url(img.php?src=$dirname$curimg&w=150&h=150&zc=1)'><p class=\"imgDescription\">$name</p></div></li>\n ";
+				echo "<li><div class=\"circular\" style=' background-image: url(img.php?src=http://agar5-lenny.herokuapp.com/client/skins/$curimg&w=150&h=150&zc=1)'><p class=\"imgDescription\">$name</p></div></li>\n ";
 			}
 		} 				
 	?>
