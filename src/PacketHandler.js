@@ -128,6 +128,13 @@ PacketHandler.prototype.setNickname = function(newNick) {
         // Turn off spectate mode
         client.spectate = false;
     }
-	client.setName(newNick);
+		if(newNick.toLowerCase().includes("baby shark") || newNick.toLowerCase() === "tech right" || newNick.toLowerCase() === "fortnite" || newNick.toLowerCase() === "johnny johnny" || newNick.toLowerCase() === "yes papa" || newNick.toLowerCase() === "illumination"|| newNick.toLowerCase() === "anonymous" || newNick.toLowerCase() === "goanimate"|| newNick.toLowerCase() === "i support peta") {
+    client.setName("KYS")
+  } else {
+  if(newNick == "") {
+    client.setName("LennyAgar")
+  } else {
+    client.setName(newNick);
+  }
 }
 
