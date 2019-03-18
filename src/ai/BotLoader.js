@@ -7,7 +7,7 @@ function BotLoader(gameServer,botAmount) {
 	this.gameServer = gameServer;
 	
 	// Names
-	this.randomNames = ["Bacteria","Spore","Satanist","Earth","Nazi","Moon","Poland","sanik","ayy lmao","Reddit","CIA","wojak","doge","sir","facepunch","8","Russia","Circle","Blob","4chan","Mars","Ogar","NASA","Helper","Parasite","Square","Round","Bug","Splitting","Ice"];
+	this.randomNames = [/*"Bacteria","Spore","Satanist","Earth","Nazi","Moon","Poland","sanik","ayy lmao","Reddit","CIA","wojak","doge","sir","facepunch","8","Russia","Circle","Blob","4chan","Mars","Ogar","NASA","Helper","Parasite","Square","Round","Bug","Splitting","Ice"*/];
 	this.nameIndex = 0;
 	
 	for (var i = 0; i < botAmount; i++) {
