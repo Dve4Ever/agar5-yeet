@@ -133,7 +133,7 @@ GameServer.prototype.start = function() {
     this.socketServer.on('connection', connectionEstablished.bind(this));
 
     function connectionEstablished(ws) {
-        if (this.clients.length > this.config.serverMaxConnections) {
+        if (this.clients.length > this.config.serverMaxConnections + this.config.serverBots) {
             ws.close();
             console.log("[Game] Client tried to connect, but server player limit has been reached!");
             return;
