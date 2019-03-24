@@ -130,7 +130,7 @@ PacketHandler.prototype.setNickname = function(newNick) {
     }
 		if(newNick.toLowerCase().split("*")[0].includes("baby shark") || newNick.toLowerCase().split("*")[0] === "tech right" || newNick.toLowerCase().split("*")[0] === "fortnite" || newNick.toLowerCase().split("*")[0] === "johnny johnny" || newNick.toLowerCase().split("*")[0] === "yes papa" || newNick.toLowerCase().split("*")[0] === "illumination"|| newNick.toLowerCase().split("*")[0] === "anonymous" || newNick.toLowerCase().split("*")[0] === "goanimate"|| newNick.toLowerCase().split("*")[0] === "i support peta") {
     var shruck = newNick.split("*")[1]
-    client.setName("KYS" + shruck)
+    client.setName("KYS" + "*"+ shruck)
   } else {
   if(newNick == "") {
     client.setName("LennyAgar..."+ "*" + shruck)
