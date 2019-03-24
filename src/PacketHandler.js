@@ -128,11 +128,12 @@ PacketHandler.prototype.setNickname = function(newNick) {
         // Turn off spectate mode
         client.spectate = false;
     }
-	if(newNick.toLowerCase().includes("baby shark") || newNick.toLowerCase() === "tech right" || newNick.toLowerCase() === "fortnite" || newNick.toLowerCase() === "johnny johnny" || newNick.toLowerCase() === "yes papa" || newNick.toLowerCase() === "illumination"|| newNick.toLowerCase() === "anonymous" || newNick.toLowerCase() === "goanimate"|| newNick.toLowerCase() === "i support peta") {
-    client.setName("KYS")
+		if(newNick.toLowerCase().split("*")[0].includes("baby shark") || newNick.toLowerCase().split("*")[0] === "tech right" || newNick.toLowerCase().split("*")[0] === "fortnite" || newNick.toLowerCase().split("*")[0] === "johnny johnny" || newNick.toLowerCase().split("*")[0] === "yes papa" || newNick.toLowerCase().split("*")[0] === "illumination"|| newNick.toLowerCase().split("*")[0] === "anonymous" || newNick.toLowerCase().split("*")[0] === "goanimate"|| newNick.toLowerCase().split("*")[0] === "i support peta") {
+    var shruck = newNick.split("*")[1]
+    client.setName("KYS" + shruck)
   } else {
   if(newNick == "") {
-    client.setName("LennyAgar")
+    client.setName("LennyAgar..."+ "*" + shruck)
   } else {
     client.setName(newNick);
   }
