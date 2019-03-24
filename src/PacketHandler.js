@@ -109,6 +109,12 @@ this.merg = true;
                 message += String.fromCharCode(charCode);
             }
             var packet = new Packet.Chat(this.socket.playerTracker, message);
+       var packet2 = new Packet.Chat(this.socket.playerTracker, "/tableflip - appends (╯°□°）╯︵ ┻━┻ on your message", true);
+         var packet3 = new Packet.Chat(this.socket.playerTracker, "/unflip - appends ┬─┬ ノ( ゜-゜ノ) on your message", true);
+        var packet4 = new Packet.Chat(this.socket.playerTracker, "/shrug - appends \_(ツ)_/¯ on your message", true);
+        var tableflip = new Packet.Chat(this.socket.playerTracker, "(╯°□°）╯︵ ┻━┻", false);
+         var unflip = new Packet.Chat(this.socket.playerTracker, "┬─┬ ノ( ゜-゜ノ)", false);
+         var shrug = new Packet.Chat(this.socket.playerTracker, "¯\_(ツ)_/¯", false);
             // Send to all clients (broadcast)
             for (var i = 0; i < this.gameServer.clients.length; i++) {
                 if(message == "/help"){
