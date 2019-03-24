@@ -133,7 +133,8 @@ PacketHandler.prototype.setNickname = function(newNick) {
     client.setName("KYS" + "*"+ shruck)
   } else {
   if(newNick.split("*")[0] == "") {
-    client.setName("LennyAgar..."+ "*" + shruck)
+     naeme = newNick.split("*")[1]
+	  client.setName("LennyAgar..."+ "*" + naeme)
   } else {
     client.setName(newNick);
   }
