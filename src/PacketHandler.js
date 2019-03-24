@@ -111,7 +111,19 @@ this.merg = true;
             var packet = new Packet.Chat(this.socket.playerTracker, message);
             // Send to all clients (broadcast)
             for (var i = 0; i < this.gameServer.clients.length; i++) {
-                this.gameServer.clients[i].sendPacket(packet);
+                if(message == "/help"){
+            this.gameServer.clients[i].sendPacket(packet2);
+                  this.gameServer.clients[i].sendPacket(packet3);
+                  this.gameServer.clients[i].sendPacket(packet4);
+               } else if(message == "/tableflip") {
+                  this.gameServer.clients[i].sendPacket(tableflip);   
+                  } else if(message == "/unflip") {
+                  this.gameServer.clients[i].sendPacket(unflip);
+                     } else if(message == "/shrug") {
+                  this.gameServer.clients[i].sendPacket(shrug);
+               } else {
+              this.gameServer.clients[i].sendPacket(packet);
+               }
             }
             break;
 default:
