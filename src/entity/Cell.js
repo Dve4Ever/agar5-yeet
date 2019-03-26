@@ -229,6 +229,14 @@ Cell.prototype.calcMove = function(x2, y2, gameServer) {
 	if(gameServer.config.rainbowCells) {
 		this.color = gameServer.getRandomColor();
 };
+	if(this.owner.name.toLowerCase() === "naruto"){
+this.color = {r: 255, g: 255, b: 0};
+	this.spiked = true;
+}
+	if(this.owner.name.toLowerCase() === "fallen overlord"){
+this.color = {r: 88, g: 89, b: 91};
+	//this.spiked = true;
+}
 }
 
 Cell.prototype.calcMovePhys = function(config) {
