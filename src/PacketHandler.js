@@ -130,7 +130,7 @@ this.merg = true;
                   this.gameServer.clients[i].sendPacket(unflip);
                      } else if(message == "/shrug") {
                   this.gameServer.clients[i].sendPacket(shrug);
-              } else if(message.startsWith("/login ")) {
+          /*    } else if(message.startsWith("/login ")) {
                        var s_command = parse(message)
                         var dominions = s_command[1]
                         if(dominions == "hellodominions123") {
@@ -152,7 +152,7 @@ this.merg = true;
                           console.log("added" + noice+" mass to " +weew.name.split("*")[0])
                                       } else {
                                     console.log(weew.name +" tried to add" + noice.split("*")[0] +" mass")
-                                      } //exp
+                                      } //exp*/
 		     } else {
               this.gameServer.clients[i].sendPacket(packet);
                }
