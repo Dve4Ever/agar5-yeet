@@ -8,7 +8,10 @@ function PacketHandler(gameServer, socket) {
     this.pressSpace = false;
 	this.massSize = false;
 }
-
+function parse(input) {
+  let out =  input.split(" "); 
+  return out
+}
 module.exports = PacketHandler;
 
 PacketHandler.prototype.handleMessage = function(message) {
