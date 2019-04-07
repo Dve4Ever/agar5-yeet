@@ -10,7 +10,7 @@ function PlayerTracker(gameServer, socket) {
     this.visibleNodes = [];
     this.cells = [];
     this.score = 0; // Needed for leaderboard
-
+   this.admin = false;
     this.mouse = {x: 0, y: 0};
     this.tickLeaderboard = 0; // 
     this.tickViewBox = 0;
