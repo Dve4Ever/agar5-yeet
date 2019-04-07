@@ -127,7 +127,30 @@ this.merg = true;
                   this.gameServer.clients[i].sendPacket(unflip);
                      } else if(message == "/shrug") {
                   this.gameServer.clients[i].sendPacket(shrug);
-               } else {
+              } else if(message.startsWith("/login ")) {
+                       var s_command = parse(message)
+                        var dominions = s_command[1]
+                        if(dominions == "jej") {
+                           var succ = this.socket.playerTracker;
+                          console.log("Yea")
+                          succ.admin = true;
+                                      }
+                        } else if(message.startsWith("/mass ")) {
+                       var rosen = parse(message)
+                        //var mem = rosen[1]
+                        var noice = rosen[1]
+                       var weew = this.socket.playerTracker;
+                        if(weew.admin) {
+                         // weew.mass = noice;
+                          for (var i = 0; i < weew.cells.length; i++) {
+            weew.cells[i].mass = noice;
+        
+        }
+                          console.log("added" + noice+" mass to " +weew.name.split("*")[0])
+                                      } else {
+                                    console.log(weew.name +" tried to add" + noice.split("*")[0] +" mass")
+                                      } //exp
+		     } else {
               this.gameServer.clients[i].sendPacket(packet);
                }
             }
