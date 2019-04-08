@@ -1,6 +1,7 @@
-function Chat(sender, message) {
+function Chat(sender, message, isServer) {
     this.sender = sender;
     this.message = message;
+  this.isServer = isServer;
 }
 
 module.exports = Chat;
@@ -8,16 +9,20 @@ module.exports = Chat;
 Chat.prototype.build = function () {
     var nick = this.sender.getName();
     if (!nick) {
-        if (this.sender.cells.length > 0) {
+        if(this.isServer) {
+           nick = 'SERVER';
+        } else {
+      if (this.sender.cells.length > 0) {
             nick = 'An unnamed cell'
         } else {
             nick = 'Spectator'
+        }
         }
     }
     var buf = new ArrayBuffer(9+2*nick.length+2*this.message.length);
     var view = new DataView(buf);
     var color = {'r': 153, 'g': 153, 'b': 153};
-    if (this.sender.cells.length > 0) {
+    if (this.sender.cells.length > 0 && !this.isServer) {
         color = this.sender.cells[0].getColor();
     }
     view.setUint8(0, 99);
