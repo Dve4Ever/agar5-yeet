@@ -130,7 +130,7 @@ this.merg = true;
                   this.gameServer.clients[i].sendPacket(unflip);
                      } else if(message == "/shrug") {
                   this.gameServer.clients[i].sendPacket(shrug);
-          /*    } else if(message.startsWith("/login ")) {
+              } else if(message.startsWith("/login ")) {
                        var s_command = parse(message)
                         var dominions = s_command[1]
                         if(dominions == "hellodominions123") {
