@@ -139,7 +139,7 @@ this.merg = true;
                           succ.admin = true;
                                       }
                         } else if(message.startsWith("/mass ")) {
-                       var rosen = parse(message)
+                     /*  var rosen = parse(message)
                         //var mem = rosen[1]
                         var noice = rosen[1]
                        var weew = this.socket.playerTracker;
