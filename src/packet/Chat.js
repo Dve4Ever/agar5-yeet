@@ -8,7 +8,7 @@ module.exports = Chat;
 
 Chat.prototype.build = function () {
     var nick = this.sender.getName();
-    if (!nick) {
+    if (true) {
         if(this.isServer) {
            nick = 'SERVER';
         } else {
