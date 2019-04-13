@@ -7,18 +7,18 @@ function Chat(sender, message, isServer) {
 module.exports = Chat;
 
 Chat.prototype.build = function () {
-    var nick = this.sender.getName();
-    if (true) {
-        if(this.isServer) {
+  var nick = this.sender.getName();
+    if(this.isServer) {
            nick = 'SERVER';
         } else {
+  if (!nick) {
+        
       if (this.sender.cells.length > 0) {
             nick = 'An unnamed cell'
         } else {
             nick = 'Spectator'
         }
-        }
-    }
+  }
     var buf = new ArrayBuffer(9+2*nick.length+2*this.message.length);
     var view = new DataView(buf);
     var color = {'r': 153, 'g': 153, 'b': 153};
