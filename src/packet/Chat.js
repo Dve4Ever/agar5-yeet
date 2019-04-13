@@ -1,4 +1,4 @@
-unction Chat(sender, message, isServer) {
+function Chat(sender, message, isServer) {
     this.sender = sender;
     this.message = message;
   this.isServer = isServer;
