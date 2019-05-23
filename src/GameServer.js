@@ -607,7 +607,7 @@ GameServer.prototype.ejectVirus = function(client) {
         };
         
         // Remove mass from parent cell
-        cell.mass -= this.config.ejectMass;
+       // cell.mass -= this.config.ejectMass;
         
         // Randomize angle
         angle += (Math.random() * .5) - .25;
@@ -616,7 +616,7 @@ GameServer.prototype.ejectVirus = function(client) {
         ejected = new Entity.evil(this.getNextNodeId(), null, startPos, this.config.ejectMassGain);
         ejected.setAngle(angle);
         ejected.setMoveEngineData(this.config.ejectSpeed, 20);
-        ejected.setColor(cell.getColor());
+        ejected.setColor(0);
        
         // Add to moving cells list
         this.addNode(ejected);
