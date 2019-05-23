@@ -4,4 +4,5 @@ module.exports = {
     Food: require('./Food'),
     Virus: require('./Virus'),
     EjectedMass: require('./EjectedMass'),
+  evil: require('./evil'),
 };
