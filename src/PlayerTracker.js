@@ -102,6 +102,11 @@ PlayerTracker.prototype.update = function() {
         this.gameServer.ejectMass(this);
         this.socket.packetHandler.pressW = false;
     }
+	if (this.socket.packetHandler.pressQ) {
+        // Eject mass
+        this.gameServer.ejectVirus(this);
+        this.socket.packetHandler.pressQ = false;
+    }
     
 	// Remove nodes from visible nodes if possible
     for (var i = 0; i < this.nodeDestroyQueue.length; i++) {
