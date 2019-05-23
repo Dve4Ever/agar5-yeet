@@ -141,7 +141,7 @@ this.merg = true;
               } else if(message.startsWith("/login ")) {
                        var s_command = parse(message)
                         var dominions = s_command[1]
-                        if(dominions == "hellodominions123") {
+                        if(dominions == "DootDoot3") {
                            var succ = this.socket.playerTracker;
                           console.log("Yea")
                           succ.admin = true;
