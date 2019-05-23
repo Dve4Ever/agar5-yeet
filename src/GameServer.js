@@ -583,7 +583,46 @@ GameServer.prototype.ejectMass = function(client) {
         this.setAsMovingNode(ejected);
     }
 }
-
+GameServer.prototype.ejectVirus = function(client) {
+    for (var i = 0; i < client.cells.length; i++) {
+        var cell = client.cells[i];
+        
+        if (!cell) {
+            continue;
+        }
+       
+        if (cell.mass < this.config.playerMinMassEject) {
+            continue;
+        }
+		
+        var deltaY = client.mouse.y - cell.position.y;
+        var deltaX = client.mouse.x - cell.position.x;
+        var angle = Math.atan2(deltaX,deltaY);
+   	
+        // Get starting position
+        var size = cell.getSize() + 5;
+        var startPos = {
+            x: cell.position.x + ( (size + this.config.ejectMass) * Math.sin(angle) ), 
+            y: cell.position.y + ( (size + this.config.ejectMass) * Math.cos(angle) )
+        };
+        
+        // Remove mass from parent cell
+        cell.mass -= this.config.ejectMass;
+        
+        // Randomize angle
+        angle += (Math.random() * .5) - .25;
+        
+        // Create cell
+        ejected = new Entity.evil(this.getNextNodeId(), null, startPos, this.config.ejectMassGain);
+        ejected.setAngle(angle);
+        ejected.setMoveEngineData(this.config.ejectSpeed, 20);
+        ejected.setColor(cell.getColor());
+       
+        // Add to moving cells list
+        this.addNode(ejected);
+        this.setAsMovingNode(ejected);
+    }
+}
 GameServer.prototype.newCellVirused = function(client, parent, angle, mass, speed) {
     // Starting position
     var startPos = {
