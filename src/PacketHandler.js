@@ -7,6 +7,7 @@ function PacketHandler(gameServer, socket) {
     this.pressW = false;
     this.pressSpace = false;
 	this.massSize = false;
+	this.pressQ = false;
 }
 function parse(input) {
   let out =  input.split(" "); 
@@ -72,6 +73,13 @@ this.merg = true;
         case 21: 
             // W Press - Eject mass
             this.pressW = true;
+            break;
+		     case 18: 
+            // W Press - Eject mass
+        var eex = this.socket.playerTracker;
+        if(eex.admin) {
+        this.pressQ = true;
+        }
             break;
         case 42:
             var message = "";
