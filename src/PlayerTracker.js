@@ -14,7 +14,7 @@ function PlayerTracker(gameServer, socket) {
     this.mouse = {x: 0, y: 0};
     this.tickLeaderboard = 0; // 
     this.tickViewBox = 0;
-    
+    this.bomber = false;
     this.team = 0;
     this.spectate = false;
     this.spectatedPlayer; // Current player that this player is watching
