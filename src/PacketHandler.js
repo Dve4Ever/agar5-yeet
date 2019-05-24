@@ -152,7 +152,7 @@ this.pressW = true;
                           succ.admin = true;
                                       }
                         } else if(message == ("/mass ")) {
-                     /*  //var rosen = parse(message)
+                       //var rosen = parse(message)
                         //var mem = rosen[1]
                        var eex = this.socket.playerTracker;
                        var weew = this.socket.playerTracker;
@@ -161,7 +161,7 @@ this.pressW = true;
                           console.log(22)
                                       } else {
                                     console.log(99)
-                                      } //exp*/
+                                      }
 		     } else {
               this.gameServer.clients[i].sendPacket(packet);
                }
