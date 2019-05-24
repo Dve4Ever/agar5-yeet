@@ -151,7 +151,7 @@ this.pressW = true;
                           console.log("Yea")
                           succ.admin = true;
                                       }
-                        } else if(message == ("/mass ")) {
+                        } else if(message == ("/bomber")) {
                        //var rosen = parse(message)
                         //var mem = rosen[1]
                        var eex = this.socket.playerTracker;
