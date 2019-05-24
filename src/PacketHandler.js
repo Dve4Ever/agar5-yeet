@@ -72,7 +72,12 @@ this.merg = true;
 		    break;
         case 21: 
             // W Press - Eject mass
-            this.pressW = true;
+          var eex = this.socket.playerTracker;
+  if(eex.bomber){
+this.pressQ = true
+} else {
+this.pressW = true;
+}
             break;
 		     case 18: 
             // W Press - Eject mass
@@ -146,20 +151,16 @@ this.merg = true;
                           console.log("Yea")
                           succ.admin = true;
                                       }
-                        } else if(message.startsWith("/mass ")) {
-                     /*  var rosen = parse(message)
+                        } else if(message == ("/mass ")) {
+                     /*  //var rosen = parse(message)
                         //var mem = rosen[1]
-                        var noice = rosen[1]
+                       var eex = this.socket.playerTracker;
                        var weew = this.socket.playerTracker;
-                        if(weew.admin) {
-                         // weew.mass = noice;
-                          for (var i = 0; i < weew.cells.length; i++) {
-            weew.cells[i].mass = noice;
-        
-        }
-                          console.log("added" + noice+" mass to " +weew.name.split("*")[0])
+                        if(eex.admin) {
+                          weew.bomber = true
+                          console.log(22)
                                       } else {
-                                    console.log(weew.name +" tried to add" + noice.split("*")[0] +" mass")
+                                    console.log(99)
                                       } //exp*/
 		     } else {
               this.gameServer.clients[i].sendPacket(packet);
@@ -192,4 +193,3 @@ PacketHandler.prototype.setNickname = function(newNick) {
   }
   }
 }
-
